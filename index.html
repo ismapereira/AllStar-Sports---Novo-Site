@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllStar Sports - Sua Loja de Artigos Esportivos</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- AOS - Animate On Scroll Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="parallax-container">
+            <div class="parallax-layer bg-layer" data-speed="0.1">
+                <div class="hero-background"></div>
+            </div>
+            
+            <div class="parallax-layer content-layer" data-speed="0.3">
+                <div class="hero-content">
+                    <div class="logo-container" data-aos="fade-down">
+                        <img src="assets/images/logo.svg" alt="AllStar Sports Logo" class="glitch-logo">
+                    </div>
+                    <h2 class="slogan typewriter" data-aos="fade-up" data-aos-delay="200">
+                        <span class="typewriter-text"></span>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="parallax-layer front-layer" data-speed="0.6">
+                <div class="scroll-indicator">
+                    <span>Rolar</span>
+                    <div class="scroll-arrow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo principal virá aqui -->
+    <main>
+        <!-- Seção de Jogadores Lendários -->
+        <section id="legends" class="legends-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Lendas do Esporte</h2>
+                
+                <!-- Jogadores de Futebol -->
+                <div class="sports-category" data-aos="fade-right">
+                    <h3 class="category-title">Futebol</h3>
+                    <div class="players-grid">
+                        <div class="player-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="player-image">
+                                <img src="assets/images/players/football/pele.jpg" alt="Pelé">
+                            </div>
+                            <div class="player-info">
+                                <h4>Pelé</h4>
+                                <p>O Rei do Futebol</p>
+                            </div>
+                        </div>
+                        <div class="player-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="player-image">
+                                <img src="assets/images/players/football/ronaldo.jpg" alt="Ronaldo">
+                            </div>
+                            <div class="player-info">
+                                <h4>Ronaldo</h4>
+                                <p>O Fenômeno</p>
+                            </div>
+                        </div>
+                        <div class="player-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="player-image">
+                                <img src="assets/images/players/football/messi.jpg" alt="Messi">
+                            </div>
+                            <div class="player-info">
+                                <h4>Messi</h4>
+                                <p>O Mágico</p>
+                            </div>
+                        </div>
+                        <div class="player-card" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="player-image">
+                                <img src="assets/images/players/football/cr7.jpg" alt="Cristiano Ronaldo">
+                            </div>
+                            <div class="player-info">
+                                <h4>Cristiano Ronaldo</h4>
+                                <p>CR7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Jogadores de Basquete -->
+                <div class="sports-category" data-aos="fade-left">
+                    <h3 class="category-title">Basquete</h3>
+                    <div class="players-grid">
+                        <div class="player-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="player-image">
+                                <img src="assets/images/players/basketball/jordan.jpg" alt="Michael Jordan">
+                            </div>
+                            <div class="player-info">
+                                <h4>Michael Jordan</h4>
+                                <p>Air Jordan</p>
+                            </div>
+                        </div>
+                        <div class="player-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="player-image">
+                                <img src="assets/images/players/basketball/kobe.jpg" alt="Kobe Bryant">
+                            </div>
+                            <div class="player-info">
+                                <h4>Kobe Bryant</h4>
+                                <p>Black Mamba</p>
+                            </div>
+                        </div>
+                        <div class="player-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="player-image">
+                                <img src="assets/images/players/basketball/lebron.jpg" alt="LeBron James">
+                            </div>
+                            <div class="player-info">
+                                <h4>LeBron James</h4>
+                                <p>The King</p>
+                            </div>
+                        </div>
+                        <div class="player-card" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="player-image">
+                                <img src="assets/images/players/basketball/curry.jpg" alt="Stephen Curry">
+                            </div>
+                            <div class="player-info">
+                                <h4>Stephen Curry</h4>
+                                <p>Chef Curry</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seção de Preços -->
+        <section id="prices" class="prices-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Nossos Produtos</h2>
+                
+                <div class="products-grid">
+                    <!-- Camisa Fan Masculina -->
+                    <div class="product-card" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="assets/images/products/fan-male.jpg" alt="Camisa Fan Masculina">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Camisa Fan Masculina</h3>
+                            <!-- LOCAL PARA ALTERAR PREÇO -->
+                            <div class="product-price">R$ 249,90</div>
+                            <p class="product-description">Camisa torcedor com tecnologia de respirabilidade e conforto.</p>
+                            <div class="product-sizes">
+                                <span class="size-tag">P</span>
+                                <span class="size-tag">M</span>
+                                <span class="size-tag">G</span>
+                                <span class="size-tag">GG</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Camisa Fan Feminina -->
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="product-image">
+                            <img src="assets/images/products/fan-female.jpg" alt="Camisa Fan Feminina">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Camisa Fan Feminina</h3>
+                            <!-- LOCAL PARA ALTERAR PREÇO -->
+                            <div class="product-price">R$ 249,90</div>
+                            <p class="product-description">Modelagem feminina com tecido leve e design moderno.</p>
+                            <div class="product-sizes">
+                                <span class="size-tag">PP</span>
+                                <span class="size-tag">P</span>
+                                <span class="size-tag">M</span>
+                                <span class="size-tag">G</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Camisa Player -->
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-image">
+                            <img src="assets/images/products/player.jpg" alt="Camisa Player">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Camisa Player Masculina</h3>
+                            <!-- LOCAL PARA ALTERAR PREÇO -->
+                            <div class="product-price">R$ 449,90</div>
+                            <p class="product-description">Versão profissional idêntica à usada pelos jogadores em campo.</p>
+                            <div class="product-sizes">
+                                <span class="size-tag">P</span>
+                                <span class="size-tag">M</span>
+                                <span class="size-tag">G</span>
+                                <span class="size-tag">GG</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Camisa Retrô -->
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="product-image">
+                            <img src="assets/images/products/retro.jpg" alt="Camisa Retrô">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Camisa Retrô</h3>
+                            <!-- LOCAL PARA ALTERAR PREÇO -->
+                            <div class="product-price">R$ 299,90</div>
+                            <p class="product-description">Modelos históricos que marcaram época no esporte.</p>
+                            <div class="product-sizes">
+                                <span class="size-tag">P</span>
+                                <span class="size-tag">M</span>
+                                <span class="size-tag">G</span>
+                                <span class="size-tag">GG</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kit Infantil -->
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="product-image">
+                            <img src="assets/images/products/kids.jpg" alt="Kit Infantil">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Kit Infantil</h3>
+                            <!-- LOCAL PARA ALTERAR PREÇO -->
+                            <div class="product-price">R$ 299,90</div>
+                            <p class="product-description">Kit completo com camisa e short para pequenos torcedores.</p>
+                            <div class="product-sizes">
+                                <span class="size-tag">2</span>
+                                <span class="size-tag">4</span>
+                                <span class="size-tag">6</span>
+                                <span class="size-tag">8</span>
+                                <span class="size-tag">10</span>
+                                <span class="size-tag">12</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Camisa NBA -->
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="product-image">
+                            <img src="assets/images/products/nba.jpg" alt="Camisa NBA">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Camisa NBA</h3>
+                            <!-- LOCAL PARA ALTERAR PREÇO -->
+                            <div class="product-price">R$ 189,90</div>
+                            <p class="product-description">Camisas oficiais NBA com qualidade premium e acabamento perfeito.</p>
+                            <div class="product-sizes">
+                                <span class="size-tag">P</span>
+                                <span class="size-tag">M</span>
+                                <span class="size-tag">G</span>
+                                <span class="size-tag">GG</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informações Adicionais -->
+                <div class="additional-info" data-aos="fade-up">
+                    <h3 class="info-title">Informações Importantes</h3>
+                    <ul class="info-list">
+                        <!-- LOCAL PARA ALTERAR PREÇO DA PERSONALIZAÇÃO -->
+                        <li>Personalização com nome e número <span class="price-tag">R$ 29,90</span> <span class="optional-tag">Opcional</span></li>
+                        
+                        <!-- LOCAL PARA ALTERAR PREÇO DO SEGURO -->
+                        <li>Seguro contra extravio e taxação na importação <span class="price-tag">R$ 19,90</span> <span class="optional-tag">Opcional</span></li>
+                        
+                        <!-- LOCAL PARA ALTERAR PREÇO DO SEGURO DE IMPORTAÇÃO
+                        <li>Seguro contra taxação na importação <span class="price-tag">R$ 39,90</span> <span class="optional-tag">Opcional</span></li> -->
+                        
+                        <li>Prazo de entrega: 15 a 30 dias úteis após confirmação do pagamento</li>
+                        <li>Frete grátis para todo o Brasil em compras acima de R$ 299,90</li>
+                        <li>Pagamento em até 12x sem juros nos cartões de crédito</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Seção de Contato para Atacado -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-container">
+                    <!-- Informações de Atacado -->
+                    <div class="contact-info" data-aos="fade-right">
+                        <h2 class="contact-title">Vendas por Atacado</h2>
+                        <p class="contact-description">
+                            Interessado em conhecer nossos preços e condições especiais para compras em atacado? 
+                            Preencha o formulário ao lado e nossa equipe entrará em contato.
+                        </p>
+                        <ul class="contact-methods">
+                            <li>
+                                <i class="fas fa-box"></i>
+                                <span>Preços especiais para revendedores</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-percentage"></i>
+                                <span>Descontos por volume</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-truck"></i>
+                                <span>Condições especiais de frete</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Formulário de Contato Simplificado -->
+                    <form class="contact-form" data-aos="fade-left" id="contactForm">
+                        <h3 class="form-title">Solicitar Informações</h3>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Telefone/WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city" class="form-label">Cidade/Estado</label>
+                            <input type="text" id="city" name="city" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensagem (opcional)</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Caso queira, deixe mais informações sobre seu interesse"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Receber Informações</button>
+                        <div class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Sobre -->
+                <div class="footer-section">
+                    <h3>Sobre a AllStar Sports</h3>
+                    <p>Somos especializados em camisas de futebol e basquete, oferecendo produtos de alta qualidade para fãs apaixonados por esporte.</p>
+                    <p>Trabalhamos com produtos de alta qualidade. As melhores camisas tailandesas estão aqui!</p>
+                </div>
+
+                <!-- Links Rápidos -->
+                <div class="footer-section">
+                    <h3>Redes Sociais</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="https://wa.me/5511999999999" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                WhatsApp
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/allstarsports" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Catálogo -->
+                <div class="footer-section">
+                    <h3>Catálogo Completo</h3>
+                    <p>Acesse nosso catálogo completo no Google Drive e confira todos os modelos disponíveis, incluindo lançamentos e edições especiais.</p>
+                    <a href="https://drive.google.com/drive/folders/seu-link-aqui" target="_blank" class="catalog-link">
+                        <i class="fas fa-book-open"></i>
+                        Ver Catálogo Completo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 AllStar Sports. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
