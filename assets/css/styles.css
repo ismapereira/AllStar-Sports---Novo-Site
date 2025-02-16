@@ -746,19 +746,86 @@ textarea.form-control::-webkit-scrollbar-thumb:hover {
     }
 }
 
-@media (max-width: 480px) {
-    .contact-title {
-        font-size: 1.75rem;
+@media (max-width: 768px) {
+    .contact {
+        padding: 4rem 1rem;
     }
 
-    .contact-description {
+    .contact-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Ajuste da tabela para mobile */
+    .wholesale-table {
+        margin: 1.5rem 0;
+        width: 100%;
+        display: table;
+    }
+
+    .wholesale-table th {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    .wholesale-table td {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    /* Empilhando conteúdo das células */
+    .wholesale-table td span {
+        display: block;
+        line-height: 1.2;
+    }
+
+    /* Ajuste dos métodos de contato */
+    .contact-methods {
+        margin: 2rem 0;
+    }
+
+    .contact-methods li {
+        margin-bottom: 0.75rem;
+    }
+
+    .contact-methods i {
+        width: 35px;
+        height: 35px;
         font-size: 0.9rem;
     }
 
+    .contact-methods span {
+        font-size: 0.85rem;
+        line-height: 1.3;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-description {
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Ajustes mais específicos para a tabela em telas muito pequenas */
     .wholesale-table th,
     .wholesale-table td {
-        padding: 0.5rem;
-        font-size: 0.85rem;
+        padding: 0.4rem;
+        font-size: 0.75rem;
+    }
+
+    .wholesale-table td span {
+        margin-bottom: 0.2rem;
     }
 }
 
