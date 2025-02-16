@@ -8,11 +8,24 @@
     --gradient: linear-gradient(135deg, var(--dark), var(--darker));
 }
 
-/* Reset CSS */
-* {
+/* Reset e configurações globais */
+html, body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+* {
     box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Estilos Globais */
@@ -24,7 +37,6 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    overflow-x: hidden;
     background-color: var(--dark);
     min-height: 100%;
 }
@@ -70,31 +82,27 @@ body {
     color: var(--primary-color);
 }
 
-/* Hero Section com Parallax */
+/* Hero Section */
 .hero {
-    height: 100vh;
-    width: 100%;
     position: relative;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
-    perspective: 1000px;
 }
 
 .parallax-container {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d;
+    overflow: hidden;
 }
 
-.parallax-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
+.hero-content {
+    position: relative;
     width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
+    max-width: 100%;
+    text-align: center;
+    z-index: 2;
 }
 
 .bg-layer {
@@ -113,12 +121,6 @@ body {
 }
 
 /* Hero Content */
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-}
-
 .logo-container {
     width: 300px;
     height: auto;
@@ -210,12 +212,6 @@ body {
     min-height: 100vh;
     padding: 100px 0;
     color: var(--white);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 /* Seção de Jogadores Lendários */
@@ -312,39 +308,27 @@ body {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 .product-card {
-    background: linear-gradient(145deg, var(--darker), var(--dark));
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .product-image {
     width: 100%;
-    height: 300px;
     overflow: hidden;
-    border-bottom: 2px solid var(--primary-color);
 }
 
 .product-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.product-card:hover .product-image img {
-    transform: scale(1.1);
 }
 
 .product-details {
@@ -461,10 +445,12 @@ body {
 
 /* Seção de Contato */
 .contact-section {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     padding: 100px 0;
     background: var(--dark);
     position: relative;
-    overflow: hidden;
 }
 
 .contact-section::before {
@@ -480,6 +466,9 @@ body {
 }
 
 .contact-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -538,6 +527,8 @@ body {
 }
 
 .contact-form {
+    width: 100%;
+    max-width: 100%;
     background: rgba(255, 255, 255, 0.05);
     padding: 3rem;
     border-radius: 15px;
@@ -813,11 +804,13 @@ img.loaded {
 
 /* Footer com efeitos especiais */
 .footer {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     background: var(--secondary-color);
     padding: 80px 0 30px;
     color: var(--white);
     position: relative;
-    overflow: hidden;
 }
 
 .footer::before {
@@ -1063,5 +1056,67 @@ img.loaded {
     .typewriter-text {
         font-size: 1.8rem;
         min-height: 45px;
+    }
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .product-card {
+        width: 100%;
+        margin: 0 auto 2rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 15px;
+    }
+
+    .hero-content {
+        padding: 0 15px;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
+        padding: 2rem 15px;
+    }
+
+    .typewriter-text {
+        font-size: 1.8rem;
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        margin: 0 auto 1.5rem;
+    }
+
+    .footer-section {
+        padding: 15px;
+    }
+
+    .contact-form {
+        padding: 1.5rem 15px;
+    }
+
+    .typewriter-text {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
     }
 }
