@@ -162,3 +162,48 @@ backToTop.addEventListener('click', (e) => {
         behavior: 'smooth'
     });
 });
+
+// Função para atualizar o menu de navegação com base no scroll
+function updateActiveSection() {
+    const sections = document.querySelectorAll('section[id]');
+    const scrollPosition = window.scrollY + window.innerHeight / 3;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        const menuItem = document.querySelector(`.floating-nav a[href="#${sectionId}"]`);
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            // Remove active de todos os links
+            document.querySelectorAll('.floating-nav a').forEach(item => {
+                item.classList.remove('active');
+            });
+            // Adiciona active ao link atual
+            if (menuItem) {
+                menuItem.classList.add('active');
+            }
+        }
+    });
+}
+
+// Adiciona o listener de scroll
+window.addEventListener('scroll', updateActiveSection);
+
+// Chama a função uma vez quando a página carrega
+document.addEventListener('DOMContentLoaded', updateActiveSection);
+
+// Scroll suave ao clicar nos links do menu
+document.querySelectorAll('.floating-nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
