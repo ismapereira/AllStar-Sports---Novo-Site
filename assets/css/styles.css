@@ -27,6 +27,7 @@ body {
     overflow-x: hidden;
     background-color: var(--dark);
     min-height: 100%;
+    cursor: none;
 }
 
 /* Navbar */
@@ -64,6 +65,7 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
+    cursor: none;
 }
 
 .nav-links a:hover {
@@ -644,6 +646,7 @@ body {
     color: var(--white);
     font-size: 1rem;
     transition: all 0.3s ease;
+    cursor: none;
 }
 
 .form-control:focus {
@@ -692,6 +695,7 @@ textarea.form-control::-webkit-scrollbar-thumb:hover {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    cursor: none;
 }
 
 .submit-btn:hover {
@@ -812,6 +816,7 @@ textarea.form-control::-webkit-scrollbar-thumb:hover {
     display: inline-block;
     transition: color 0.3s ease;
     font-weight: 400;
+    cursor: none;
 }
 
 .floating-nav a:hover {
@@ -851,6 +856,7 @@ textarea.form-control::-webkit-scrollbar-thumb:hover {
     font-size: 1.2rem;
     transition: color 0.3s ease, text-shadow 0.3s ease;
     display: block;
+    cursor: none;
 }
 
 .social-nav a:hover {
@@ -993,6 +999,7 @@ textarea.form-control::-webkit-scrollbar-thumb:hover {
     padding: 10px;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.03);
+    cursor: none;
 }
 
 .footer-links a i {
@@ -1029,6 +1036,7 @@ textarea.form-control::-webkit-scrollbar-thumb:hover {
     margin-top: 1rem;
     position: relative;
     overflow: hidden;
+    cursor: none;
 }
 
 .catalog-link::before {
@@ -1119,6 +1127,7 @@ img.loaded {
     opacity: 0;
     z-index: 999;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: none;
 }
 
 .back-to-top.visible {
@@ -1144,4 +1153,44 @@ img.loaded {
 section {
     position: relative;
     z-index: 1;
+}
+
+/* Cursor Personalizado */
+.cursor-dot,
+.cursor-dot-outline {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-out, opacity 0.15s ease-out, background-color 0.15s ease-out, border-width 0.15s ease-out;
+    z-index: 9999;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+}
+
+.cursor-dot-outline {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 0.1px solid rgba(0, 163, 255, 0.3);
+}
+
+/* Efeito hover em links e botões */
+a:hover ~ .cursor-dot,
+button:hover ~ .cursor-dot {
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+a:hover ~ .cursor-dot-outline,
+button:hover ~ .cursor-dot-outline {
+    transform: translate(-50%, -50%) scale(3.5);
+    background-color: rgba(0, 163, 255, 0.1);
+    border-width: 2px;
 }
