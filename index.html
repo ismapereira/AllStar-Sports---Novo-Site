@@ -31,6 +31,7 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
+        <div id="particles-js"></div>
         <!-- Menu de Redes Sociais -->
         <nav class="social-nav">
             <ul>
@@ -462,13 +463,17 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="assets/js/particles-config.js"></script>
     <script src="assets/js/main.js"></script>
-    
-    <!-- Cursor Personalizado -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-dot-outline"></div>
-
-    <!-- Scripts -->
-    <script src="assets/js/cursor.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        
+        // Inicializar partículas
+        particlesJS('particles-js', particlesConfig);
+    </script>
 </body>
 </html>
