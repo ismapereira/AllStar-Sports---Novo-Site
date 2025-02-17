@@ -144,19 +144,35 @@ document.getElementById('contactForm')?.addEventListener('submit', function(e) {
     }, 5000);
 });
 
+// Inicializar efeito tilt nos cards de lendas
+VanillaTilt.init(document.querySelectorAll(".legend-card"), {
+    max: 5,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2,
+    scale: 1.02
+});
+
+// Desativar tilt em dispositivos móveis
+if (window.innerWidth <= 768) {
+    const cards = document.querySelectorAll(".legend-card");
+    cards.forEach(card => {
+        card.vanillaTilt.destroy();
+    });
+}
+
 // Botão Voltar ao Topo
-const backToTop = document.getElementById('backToTop');
+const backToTopButton = document.querySelector('.back-to-top');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        backToTop.classList.add('visible');
+    if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('visible');
     } else {
-        backToTop.classList.remove('visible');
+        backToTopButton.classList.remove('visible');
     }
 });
 
-backToTop.addEventListener('click', (e) => {
-    e.preventDefault();
+backToTopButton.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'

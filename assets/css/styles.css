@@ -260,6 +260,187 @@ body {
     padding: 0 20px;
 }
 
+/* Seção de Lendas */
+.legends-section {
+    padding: 6rem 0;
+    background: var(--dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.sport-subsection {
+    margin-top: 4rem;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.sport-subsection:first-of-type {
+    margin-top: 2rem;
+}
+
+.sport-label {
+    display: inline-block;
+    width: 35%;
+    min-width: 200px;
+    background: linear-gradient(90deg, 
+        rgba(0, 119, 204, 0.85) 0%,
+        rgba(0, 119, 204, 0.6) 15%,
+        rgba(0, 119, 204, 0.3) 30%,
+        rgba(0, 119, 204, 0.15) 45%,
+        rgba(17, 17, 17, 0.05) 65%,
+        rgba(17, 17, 17, 0) 100%
+    );
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    border-left: 2px solid rgba(0, 119, 204, 0.7);
+}
+
+.sport-label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.03),
+        transparent
+    );
+    transition: 0.8s;
+}
+
+.sport-label:hover::before {
+    left: 100%;
+}
+
+.legends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.legend-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: all 0.3s ease;
+}
+
+.legend-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    padding: 2px;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 163, 255, 0.5),
+        transparent,
+        rgba(0, 163, 255, 0.5)
+    );
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.legend-card:hover::before {
+    opacity: 1;
+}
+
+.legend-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    overflow: hidden;
+    position: relative;
+    transform: translateZ(20px);
+}
+
+.legend-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.legend-card:hover .legend-image img {
+    transform: scale(1.1);
+}
+
+.legend-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at 50% 50%,
+        transparent 50%,
+        rgba(0, 163, 255, 0.2)
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.legend-card:hover .legend-image::after {
+    opacity: 1;
+}
+
+.legend-name {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    transform: translateZ(30px);
+}
+
+.legend-title {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transform: translateZ(25px);
+}
+
+.legend-description {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    transform: translateZ(20px);
+}
+
+@media (max-width: 768px) {
+    .legends-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .legend-card {
+        transform: none !important;
+    }
+    
+    .sport-label {
+        width: 60%;
+        min-width: 150px;
+    }
+    
+    .sport-subsection {
+        padding: 0 0.5rem;
+    }
+}
+
 /* Seção de Jogadores Lendários */
 .legends-section {
     padding: 100px 0;
