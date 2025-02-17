@@ -1194,3 +1194,25 @@ button:hover ~ .cursor-dot-outline {
     background-color: rgba(0, 163, 255, 0.1);
     border-width: 2px;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    /* Esconder cursor personalizado */
+    .cursor-dot,
+    .cursor-dot-outline {
+        display: none;
+    }
+
+    /* Restaurar cursor padrão */
+    body,
+    a,
+    button {
+        cursor: auto;
+    }
+
+    /* Esconder menus flutuantes */
+    .floating-nav,
+    .social-nav {
+        display: none;
+    }
+}
