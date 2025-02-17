@@ -730,12 +730,6 @@ textarea.form-control::-webkit-scrollbar-thumb:hover {
         order: 1;
     }
 
-    .contact-description {
-        font-size: 1rem;
-        line-height: 1.5;
-        margin-bottom: 2rem;
-    }
-
     .contact-form {
         order: 2;
         margin-top: 2rem;
@@ -1168,5 +1162,19 @@ img.loaded {
         max-width: 100%;
         padding-left: 15px;
         padding-right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        order: 1;
+    }
+
+    .contact-form {
+        order: 2;
     }
 }
