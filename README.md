@@ -1,173 +1,122 @@
-# AllStar Sports - Loja de Artigos Esportivos 🏀⚽
+# 🏀 AllStar Sports
 
-![AllStar Sports Logo](assets/images/logo.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Responsive](https://img.shields.io/badge/Responsive-Design-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.w3.org/TR/css3-mediaqueries/)
+
+<div align="center">
+  <img src="https://media.giphy.com/media/3oEdv4hwWTzBhWvaU0/giphy.gif" alt="Basketball Animation" width="300px">
+</div>
 
 ## 📋 Sobre o Projeto
 
-AllStar Sports é uma loja especializada em camisas de futebol e basquete, oferecendo produtos de alta qualidade para fãs apaixonados por esporte. O site foi desenvolvido com foco em design moderno, experiência do usuário e performance.
+A AllStar Sports Store é uma loja online especializada em artigos esportivos, com foco em camisas oficiais de basquete e futebol. O site foi desenvolvido com as melhores práticas de design e desenvolvimento web, oferecendo uma experiência de usuário excepcional.
 
 ### ✨ Características Principais
 
-- Design responsivo e moderno
-- Animações suaves e interativas
-- Seções bem organizadas para melhor navegação
-- Otimizado para performance e SEO
+- 🎯 Design responsivo e moderno
+- 🌟 Animações suaves e interativas
+- 🏃 Performance otimizada
+- 📱 Compatível com todos os dispositivos
+- 🎨 Interface intuitiva e atraente
 
-## 🛠️ Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
-- **HTML5** - Estruturação moderna e semântica
-- **CSS3** - Estilização avançada com:
-  - Flexbox e Grid para layouts
-  - Variáveis CSS para tema consistente
-  - Animações e transições
-  - Media queries para responsividade
-- **JavaScript** - Interatividade e animações:
-  - Efeito de digitação no hero
-  - Parallax scroll
-  - Animações ao scroll (AOS)
-  - Formulário interativo
+- **HTML5** - Estruturação semântica
+- **CSS3** - Estilização moderna com:
+  - Flexbox
+  - Grid
+  - Animações
+  - Variáveis CSS
+  - Media Queries
+- **JavaScript** - Interatividade e funcionalidades
+- **AOS (Animate on Scroll)** - Animações de scroll
+- **Google Fonts** - Tipografia personalizada
 
-### 📚 Bibliotecas Externas
+## 🎯 Seções do Site
 
-- [Font Awesome](https://fontawesome.com/) - Ícones
-- [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/) - Animações de scroll
-- [Google Fonts (Poppins)](https://fonts.google.com/specimen/Poppins) - Tipografia
-
-## 🗂️ Estrutura do Projeto
-
-```
-AllStar Sports/
-├── assets/
-│   ├── css/
-│   │   └── styles.css
-│   ├── js/
-│   │   └── main.js
-│   └── images/
-│       ├── logo.svg
-│       └── products/
-├── backup/
-├── index.html
-└── README.md
-```
-
-## 📱 Seções do Site
-
-### 1. Hero Section
-- Banner principal com efeito parallax
-- Logo animado
-- Slogan com efeito de digitação
-- Indicador de scroll
-
-### 2. Lendas do Esporte
-- Galeria de jogadores lendários
-- Animações suaves ao scroll
-- Layout responsivo em grid
-
-### 3. Produtos
-- Cards de produtos com hover effects
-- Preços e informações detalhadas
-- Tamanhos disponíveis
-- Animações de entrada
-
-### 4. Contato para Atacado
-- Formulário simplificado
-- Validação de campos
-- Feedback visual de envio
-- Design moderno com gradiente
-
-### 5. Footer
+### 🏠 Home
+- Hero section com animação de parallax
+- Menu de navegação flutuante
 - Links para redes sociais
-- Acesso ao catálogo
-- Informações da empresa
-- Efeitos visuais especiais
 
-## 🎨 Paleta de Cores
+### 🏆 Lendas do Esporte
+- Cards informativos
+- Efeitos de hover elegantes
+- Categorias por modalidade
 
-- **Primária**: `#00afef` - Azul vibrante
-- **Secundária**: `#001e5a` - Azul escuro
-- **Branco**: `#ffffff`
-- **Escuro**: `#0a0a0a`
-- **Mais escuro**: `#050505`
+### 🛍️ Produtos
+- Grid responsivo de produtos
+- Cards interativos
+- Informações detalhadas
+- Sistema de tamanhos
 
-## 🖥️ Recursos Interativos
+### 📞 Contato
+- Formulário de contato
+- Tabela de preços para atacado
+- Informações de contato
 
-1. **Efeito de Digitação**
-   - Slogan principal alternando entre frases
-   - Cursor piscante personalizado
-   - Timing suave de transições
+## 💻 Como Executar
 
-2. **Parallax Scroll**
-   - Múltiplas camadas de profundidade
-   - Performance otimizada
-   - Efeito suave de movimento
+1. Clone o repositório
+```bash
+git clone https://github.com/seu-usuario/allstar-sports-store.git
+```
 
-3. **Animações AOS**
-   - Fade-up em cards e seções
-   - Delays sequenciais
-   - Triggers otimizados
+2. Navegue até o diretório
+```bash
+cd allstar-sports-store
+```
 
-4. **Formulário de Contato**
-   - Validação em tempo real
-   - Feedback visual de sucesso/erro
-   - Design responsivo
+3. Abra o arquivo index.html no seu navegador
+```bash
+start index.html
+```
 
 ## 📱 Responsividade
 
-O site é totalmente responsivo, adaptando-se a diferentes tamanhos de tela:
+O site é totalmente responsivo e se adapta aos seguintes dispositivos:
 
-- **Desktop**: 1200px+
-- **Tablet**: 768px - 1199px
-- **Mobile**: < 768px
+- 📱 Smartphones (320px+)
+- 📱 Tablets (768px+)
+- 💻 Laptops (1024px+)
+- 🖥️ Desktops (1200px+)
 
 ## ⚡ Performance
 
-Otimizações implementadas:
-- Lazy loading de imagens
-- Minificação de CSS/JS
-- Compressão de imagens
-- Cache de recursos estáticos
+- Imagens otimizadas
+- CSS minificado
+- JavaScript modular
+- Carregamento assíncrono
+- Cache eficiente
 
-## 🔄 Backup
+## 🎨 Paleta de Cores
 
-O projeto possui sistema de backup automático:
-- Localização: `/backup`
-- Nomenclatura: `AllStar Sports - Novo Site_backup_YYYY-MM-DD_HH-mm.zip`
-- Inclui todos os arquivos e recursos
+- ![#00AFEF](https://via.placeholder.com/15/00AFEF/000000?text=+) `#00AFEF` - Cor Primária
+- ![#001E5A](https://via.placeholder.com/15/001E5A/000000?text=+) `#001E5A` - Cor Secundária
+- ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `#FFFFFF` - Branco
+- ![#0A0A0A](https://via.placeholder.com/15/0A0A0A/000000?text=+) `#0A0A0A` - Escuro
+- ![#050505](https://via.placeholder.com/15/050505/000000?text=+) `#050505` - Mais Escuro
 
-## 🚀 Como Executar
+## 📝 Licença
 
-1. Clone o repositório
-2. Abra o arquivo `index.html` em um navegador moderno
-3. Ou utilize um servidor local (recomendado):
-   ```bash
-   # Usando Python
-   python -m http.server 8000
-   
-   # Usando Node.js
-   npx serve
-   ```
-
-## 📝 Manutenção
-
-Para atualizar o site:
-1. Edite os arquivos necessários
-2. Teste em diferentes navegadores
-3. Crie um backup antes de publicar
-4. Atualize os arquivos no servidor
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## 🤝 Contribuição
 
-Para contribuir com o projeto:
-1. Faça um fork
-2. Crie uma branch para sua feature
-3. Commit suas mudanças
-4. Push para a branch
-5. Abra um Pull Request
+Contribuições são sempre bem-vindas! Por favor, leia as [diretrizes de contribuição](CONTRIBUTING.md) primeiro.
 
-## 📄 Licença
+## 👨‍💻 Autor
 
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+Feito com ❤️ por [Ismael](https://github.com/ismapereira)
 
 ---
 
-Desenvolvido com 💙 por Ismael Pereira
+<div align="center">
+  <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Code Animation" width="200px">
+  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ismael-pereira-feitosa-ba2aa91a9/)
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ismapereira)
+</div>
