@@ -57,6 +57,14 @@ setTimeout(typeWriter, 2000);
 document.addEventListener('DOMContentLoaded', () => {
     const hero = document.querySelector('.hero');
     const layers = document.querySelectorAll('.parallax-layer');
+    let ticking = false;
+    let lastScrollY = window.pageYOffset;
+    let rafId = null;
+
+    // Função para suavizar o movimento
+    function lerp(start, end, factor) {
+        return start + (end - start) * factor;
+    }
 
     // Função para atualizar o parallax
     function updateParallax() {
@@ -65,38 +73,94 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (scrolled <= limit) {
             layers.forEach(layer => {
-                const speed = layer.getAttribute('data-speed');
+                const speed = parseFloat(layer.getAttribute('data-speed'));
                 const yPos = -(scrolled * speed);
-                layer.style.transform = `translate3d(0, ${yPos}px, 0)`;
+                
+                // Aplicar transformação com suavização
+                const currentTransform = layer.style.transform;
+                const currentY = currentTransform ? parseFloat(currentTransform.match(/-?\d+\.?\d*/)) || 0 : 0;
+                const targetY = yPos;
+                const smoothY = lerp(currentY, targetY, 0.1);
+                
+                layer.style.transform = `translate3d(0, ${smoothY}px, 0)`;
             });
+        }
+
+        ticking = false;
+    }
+
+    // Otimizar o scroll com requestAnimationFrame
+    function onScroll() {
+        lastScrollY = window.pageYOffset;
+        if (!ticking) {
+            rafId = requestAnimationFrame(() => {
+                updateParallax();
+                ticking = false;
+            });
+            ticking = true;
         }
     }
 
-    // Atualiza o parallax no scroll
-    window.addEventListener('scroll', () => {
-        requestAnimationFrame(updateParallax);
+    // Atualizar parallax no scroll com throttling
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Movimento suave no mouse
+    let mouseX = 0;
+    let mouseY = 0;
+    let currentX = 0;
+    let currentY = 0;
+
+    hero.addEventListener('mousemove', (e) => {
+        mouseX = (e.clientX / window.innerWidth - 0.5) * 20;
+        mouseY = (e.clientY / window.innerHeight - 0.5) * 20;
     });
 
-    // Atualiza o parallax no movimento do mouse
-    hero.addEventListener('mousemove', (e) => {
-        const mouseX = e.clientX / window.innerWidth;
-        const mouseY = e.clientY / window.innerHeight;
+    function updateMouseParallax() {
+        // Suavizar movimento do mouse
+        currentX = lerp(currentX, mouseX, 0.05);
+        currentY = lerp(currentY, mouseY, 0.05);
 
         layers.forEach(layer => {
-            const speed = layer.getAttribute('data-speed');
-            const xPos = (mouseX - 0.5) * 50 * speed;
-            const yPos = (mouseY - 0.5) * 50 * speed;
+            const speed = parseFloat(layer.getAttribute('data-speed'));
+            const xPos = currentX * speed;
+            const yPos = currentY * speed;
             
             layer.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
         });
-    });
 
-    // Reset quando o mouse sai da área
+        requestAnimationFrame(updateMouseParallax);
+    }
+
+    updateMouseParallax();
+
+    // Limpar animation frame quando o mouse sai
     hero.addEventListener('mouseleave', () => {
-        layers.forEach(layer => {
-            layer.style.transform = 'translate3d(0, 0, 0)';
-        });
+        mouseX = 0;
+        mouseY = 0;
     });
+});
+
+// Criar partículas de fundo
+document.addEventListener('DOMContentLoaded', () => {
+    const particlesContainer = document.createElement('div');
+    particlesContainer.className = 'particles';
+    document.querySelector('.hero-background').appendChild(particlesContainer);
+
+    // Criar partículas com posições aleatórias
+    const numberOfParticles = 30;
+    for (let i = 0; i < numberOfParticles; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Posição inicial aleatória
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        
+        // Atraso aleatório na animação
+        particle.style.animationDelay = `${Math.random() * 20}s`;
+        
+        particlesContainer.appendChild(particle);
+    }
 });
 
 // Loading suave de imagens

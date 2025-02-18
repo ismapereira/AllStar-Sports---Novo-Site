@@ -194,6 +194,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
     background: 
         radial-gradient(circle at center, rgba(0, 30, 90, 0.3) 0%, var(--darker) 100%),
         var(--gradient);
@@ -209,6 +214,49 @@ body {
     height: 100%;
     background: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="%23ffffff05"/></svg>') 0 0/50px 50px;
     opacity: 0.05;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.6;
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.particle {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: float-particle 20s infinite linear;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+@keyframes float-particle {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(100vw);
+        opacity: 0;
+    }
 }
 
 /* Scroll Indicator */
