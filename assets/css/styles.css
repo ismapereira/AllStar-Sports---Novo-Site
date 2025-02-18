@@ -334,10 +334,23 @@ body {
 
 /* Seção de Lendas */
 .legends-section {
-    padding: 6rem 0;
-    background: var(--dark);
+    padding: 120px 0;
+    background: linear-gradient(180deg, var(--dark) 0%, var(--darker) 100%);
     position: relative;
     overflow: hidden;
+}
+
+.legends-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(0, 119, 204, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 119, 204, 0.05) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .sport-subsection {
@@ -600,9 +613,23 @@ body {
 
 /* Seção de Preços */
 .prices-section {
-    padding: 100px 0;
-    background-color: var(--dark);
-    color: var(--white);
+    padding: 120px 0;
+    background: linear-gradient(180deg, var(--darker) 0%, var(--dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.prices-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(0, 119, 204, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 119, 204, 0.05) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .products-grid {
@@ -783,14 +810,14 @@ body {
 }
 
 /* Seção de Contato */
-.contact-section {
+.contact {
     padding: 120px 0;
     background: linear-gradient(180deg, var(--dark) 0%, var(--darker) 100%);
     position: relative;
     overflow: hidden;
 }
 
-.contact-section::before {
+.contact::before {
     content: '';
     position: absolute;
     top: 0;
@@ -803,7 +830,7 @@ body {
     pointer-events: none;
 }
 
-.contact-section .section-title {
+.contact .section-title {
     color: var(--white);
     text-align: center;
     margin-bottom: 3rem;
@@ -812,7 +839,7 @@ body {
     position: relative;
 }
 
-.contact-section .section-title::after {
+.contact .section-title::after {
     content: '';
     display: block;
     width: 80px;
@@ -1097,6 +1124,26 @@ textarea.form-control {
     .contact-form {
         padding: 1.5rem;
     }
+}
+
+/* Estilos Comuns para Seções */
+.section-title {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 1rem auto 0;
+    border-radius: 2px;
 }
 
 /* Footer com efeitos especiais */
@@ -1496,4 +1543,29 @@ button,
 .social-nav a:hover::before {
     opacity: 1;
     transform: translateY(-50%) translateX(0);
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .legends-section,
+    .prices-section,
+    .contact {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .legends-section,
+    .prices-section,
+    .contact {
+        padding: 60px 0;
+    }
 }
