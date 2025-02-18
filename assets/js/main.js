@@ -189,23 +189,80 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Manipulação do formulário de contato
-document.getElementById('contactForm')?.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const formMessage = this.querySelector('.form-message');
-    
-    // Simula envio do formulário
-    formMessage.style.display = 'block';
-    formMessage.className = 'form-message success';
-    formMessage.textContent = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
-    
-    // Limpa o formulário
-    this.reset();
-    
-    // Remove a mensagem após 5 segundos
-    setTimeout(() => {
-        formMessage.style.display = 'none';
-    }, 5000);
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    const inputs = form.querySelectorAll('.form-control');
+
+    // Adiciona feedback visual enquanto o usuário digita
+    inputs.forEach(input => {
+        input.addEventListener('input', () => {
+            if (input.value.trim() !== '') {
+                input.classList.add('has-content');
+            } else {
+                input.classList.remove('has-content');
+            }
+        });
+    });
+
+    // Validação do formulário
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        let isValid = true;
+        const formData = new FormData(form);
+        
+        // Validação básica
+        inputs.forEach(input => {
+            if (input.hasAttribute('required') && !input.value.trim()) {
+                isValid = false;
+                input.classList.add('invalid');
+            } else {
+                input.classList.remove('invalid');
+            }
+        });
+
+        if (!isValid) {
+            showMessage('Por favor, preencha todos os campos obrigatórios.', 'error');
+            return;
+        }
+
+        // Simulação de envio
+        const submitBtn = form.querySelector('.submit-btn');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando...';
+
+        try {
+            // Aqui você adicionaria a lógica real de envio do formulário
+            await new Promise(resolve => setTimeout(resolve, 1500)); // Simulação
+            
+            showMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
+            form.reset();
+            inputs.forEach(input => input.classList.remove('has-content'));
+        } catch (error) {
+            showMessage('Erro ao enviar mensagem. Por favor, tente novamente.', 'error');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Enviar Mensagem';
+        }
+    });
+
+    function showMessage(text, type) {
+        const messageDiv = form.querySelector('.form-message') || document.createElement('div');
+        messageDiv.className = `form-message ${type}`;
+        messageDiv.textContent = text;
+        messageDiv.style.display = 'block';
+        
+        if (!form.querySelector('.form-message')) {
+            form.appendChild(messageDiv);
+        }
+
+        // Remove a mensagem após 5 segundos
+        setTimeout(() => {
+            messageDiv.style.display = 'none';
+        }, 5000);
+    }
 });
 
 // Inicializar efeito tilt nos cards de lendas
