@@ -27,12 +27,12 @@ function typeWriter() {
         charIndex++;
         if (charIndex > currentPhrase.length) {
             isEnd = true;
-            // Pausa maior quando é o slogan principal
-            const pauseTime = currentPhrase === mainSlogan ? 3000 : 1500;
-            setTimeout(typeWriter, pauseTime);
-            isDeleting = true;
+            setTimeout(() => {
+                isDeleting = true;
+                typeWriter();
+            }, currentPhrase === mainSlogan ? 4000 : 2000);
         } else {
-            setTimeout(typeWriter, 100);
+            setTimeout(typeWriter, 75); // Velocidade de digitação mais suave
         }
     } else if (isDeleting && charIndex >= 0) {
         typewriter.textContent = currentPhrase.substring(0, charIndex);
@@ -41,17 +41,17 @@ function typeWriter() {
             isDeleting = false;
             phraseIndex++;
             if (phraseIndex === phrases.length) {
-                phraseIndex = 0; // Volta ao início (que é o slogan principal)
+                phraseIndex = 0;
             }
+            setTimeout(typeWriter, 500); // Pausa antes de começar nova frase
+        } else {
+            setTimeout(typeWriter, 40); // Velocidade de apagar mais rápida
         }
-        // Apaga mais rápido quando não é o slogan principal
-        const deleteSpeed = currentPhrase === mainSlogan ? 50 : 30;
-        setTimeout(typeWriter, deleteSpeed);
     }
 }
 
-// Inicia com o slogan principal
-setTimeout(typeWriter, 1000);
+// Inicia o efeito após a animação da logo
+setTimeout(typeWriter, 2000);
 
 // Efeito de Parallax
 document.addEventListener('DOMContentLoaded', () => {

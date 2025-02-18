@@ -176,6 +176,17 @@ body {
     will-change: transform;
 }
 
+.typewriter-text {
+    border-right: 2px solid var(--primary-color);
+    padding-right: 5px;
+    animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary-color); }
+}
+
 /* Hero Background */
 .hero-background {
     position: absolute;
