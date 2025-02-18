@@ -149,6 +149,19 @@ body {
     width: 100%;
     height: auto;
     filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(0, 175, 239, 0.7));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .slogan {
