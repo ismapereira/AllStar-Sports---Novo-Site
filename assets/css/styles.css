@@ -487,6 +487,7 @@ body {
     mask-composite: exclude;
     opacity: 0;
     transition: opacity 0.3s ease;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
 }
 
 .legend-card:hover::before {
