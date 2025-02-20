@@ -109,9 +109,6 @@ Contribuições são sempre bem-vindas! Por favor, leia as [diretrizes de contri
 Feito com ❤️ por [Ismael Pereira](https://github.com/ismapereira)
 
 ---
-
-<div align="center">
-  <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Code Animation" width="200px">
   
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ismael-pereira-feitosa-ba2aa91a9/)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ismapereira)
