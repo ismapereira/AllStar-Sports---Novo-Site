@@ -59,7 +59,7 @@ Este Código de Conduta se aplica a:
 
 ### 📢 Reportando Violações
 
-1. Contate a equipe do projeto em [ismael.pfeitosa@gmail.com](mailto:ismael.pfeitosa@gmail.com)
+1. Contate o desenvolvedor do projeto em [ismaelpereirafeitosa@hotmail.com](mailto:ismaelpereirafeitosa@hotmail.com)
 2. Todas as reclamações serão revisadas e investigadas
 3. A privacidade e segurança do denunciante serão respeitadas
 

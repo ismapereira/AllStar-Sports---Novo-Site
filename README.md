@@ -6,10 +6,6 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Responsive](https://img.shields.io/badge/Responsive-Design-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.w3.org/TR/css3-mediaqueries/)
 
-<div align="center">
-  <img src="https://media.giphy.com/media/3oEdv4hwWTzBhWvaU0/giphy.gif" alt="Basketball Animation" width="300px">
-</div>
-
 ## 📋 Sobre o Projeto
 
 A AllStar Sports Store é uma loja online especializada em artigos esportivos, com foco em camisas oficiais de basquete e futebol. O site foi desenvolvido com as melhores práticas de design e desenvolvimento web, oferecendo uma experiência de usuário excepcional.
@@ -110,7 +106,7 @@ Contribuições são sempre bem-vindas! Por favor, leia as [diretrizes de contri
 
 ## 👨‍💻 Autor
 
-Feito com ❤️ por [Ismael](https://github.com/ismapereira)
+Feito com ❤️ por [Ismael Pereira](https://github.com/ismapereira)
 
 ---
 
