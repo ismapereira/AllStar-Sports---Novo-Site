@@ -1745,3 +1745,35 @@ section {
         padding: 60px 0;
     }
 }
+
+/* Botão Catálogo Completo */
+.catalog-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.catalog-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 175, 239, 0.3);
+}
+
+.catalog-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 175, 239, 0.4);
+    background: #0095cc;
+}
+
+.catalog-button i {
+    font-size: 1.2em;
+}
