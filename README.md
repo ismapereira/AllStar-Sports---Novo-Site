@@ -189,16 +189,16 @@ Feito com ❤️ por [Ismael](https://github.com/ismapereira)
   
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ismael-pereira-feitosa-ba2aa91a9/)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ismapereira)
-  [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://seu-portfolio.com)
-  [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:seu-email@gmail.com)
+  [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ismapereira.github.io/Portifolio-Ismael-Pereira/)
+  [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ismaelpereirafeitosa@hotmail.com)
 </div>
 
 ---
 
 <div align="center">
   
-[![Visitors](https://visitor-badge.glitch.me/badge?page_id=ismapereira.allstar-sports)](https://github.com/ismapereira)
-[![Last Updated](https://img.shields.io/github/last-commit/ismapereira/allstar-sports?style=flat&label=Última%20Atualização&color=success)](https://github.com/ismapereira)
-[![Stars](https://img.shields.io/github/stars/ismapereira/allstar-sports?style=social)](https://github.com/ismapereira)
+[![Visitors](https://visitor-badge.glitch.me/badge?page_id=ismapereira.allstar-sports)](https://github.com/ismapereira/AllStar-Sports---Novo-Site)
+[![Last Updated](https://img.shields.io/github/last-commit/ismapereira/allstar-sports?style=flat&label=Última%20Atualização&color=success)](https://github.com/ismapereira/AllStar-Sports---Novo-Site)
+[![Stars](https://img.shields.io/github/stars/ismapereira/allstar-sports?style=social)](https://github.com/ismapereira/AllStar-Sports---Novo-Site)
 
 </div>
