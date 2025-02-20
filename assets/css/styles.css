@@ -1199,6 +1199,82 @@ textarea.form-control {
     }
 }
 
+.policy-section a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.policy-section a:hover {
+    color: #0095cc;
+}
+
+.policy-section .contact-info {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.policy-section .contact-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.policy-section .contact-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.policy-section .contact-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: var(--primary-color);
+    color: var(--white) !important;
+    text-decoration: none !important;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.policy-section .contact-button:hover {
+    background: #0095cc;
+    transform: translateY(-2px);
+}
+
+.policy-section .contact-button i {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .policy-section .contact-methods {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .policy-section .contact-method-item {
+        padding: 0.8rem;
+    }
+
+    .policy-section .contact-method-icon {
+        font-size: 1.1rem;
+    }
+
+    .policy-section .contact-method-info {
+        font-size: 0.9rem;
+    }
+}
+
 /* Estilos Comuns para Seções */
 .section-title {
     color: var(--white);
@@ -1776,4 +1852,458 @@ section {
 
 .catalog-button i {
     font-size: 1.2em;
+}
+
+/* Modais */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--dark);
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.modal.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    color: var(--white);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 20px;
+    color: var(--white);
+}
+
+/* FAQ Modal */
+.faq-search {
+    margin-bottom: 20px;
+}
+
+.faq-search input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--white);
+}
+
+.faq-categories {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.faq-category {
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: none;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-category.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: background 0.3s ease;
+}
+
+.faq-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.faq-item h3 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+/* Envios Modal */
+.shipping-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shipping-section {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.shipping-section h3 {
+    color: var(--primary-color);
+    margin: 0 0 10px;
+}
+
+.shipping-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.shipping-section li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.shipping-section li:before {
+    content: "•";
+    color: var(--primary-color);
+}
+
+/* Contato Modal */
+.quick-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-option {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.contact-option:hover {
+    transform: translateY(-2px);
+}
+
+.contact-option i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.contact-option h3 {
+    margin: 10px 0;
+    color: var(--white);
+}
+
+.contact-option p {
+    margin: 0 0 15px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+.contact-button:hover {
+    background: #0095cc;
+}
+
+.contact-divider {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.contact-divider:before,
+.contact-divider:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-divider:before {
+    left: 0;
+}
+
+.contact-divider:after {
+    right: 0;
+}
+
+.contact-divider span {
+    background: var(--dark);
+    padding: 0 15px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-link {
+    display: block;
+    text-align: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+}
+
+.modal-link:hover {
+    color: #0095cc;
+}
+
+.contact-form-link {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Responsividade dos Modais */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 20px;
+    }
+
+    .faq-categories {
+        gap: 5px;
+    }
+
+    .faq-category {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    .contact-option {
+        padding: 15px;
+    }
+}
+
+/* Página de Política de Trocas */
+.policy-page {
+    padding: 120px 0 60px;
+    position: relative;
+    color: var(--white);
+    min-height: 100vh;
+    background-color: var(--dark);
+}
+
+.policy-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="%23ffffff05"/></svg>') 0 0/50px 50px;
+    opacity: 0.05;
+}
+
+.policy-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.policy-section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.policy-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.policy-section p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.policy-section ul, 
+.policy-section ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.policy-section li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.alert-text {
+    color: #ff4444 !important;
+    font-weight: 500;
+    padding: 1rem;
+    background: rgba(255, 68, 68, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #ff4444;
+}
+
+.legal-info {
+    padding: 1.5rem;
+    background: rgba(0, 175, 239, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.legal-info p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .policy-page {
+        padding: 100px 0 40px;
+    }
+
+    .policy-content {
+        padding: 15px;
+    }
+
+    .policy-section {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .policy-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .contact-options {
+        flex-direction: column;
+    }
+
+    .contact-options .contact-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Botão Voltar */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    z-index: 100;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:hover {
+    background: #0095cc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.back-button i {
+    font-size: 1.2rem;
+}
+
+.back-button span {
+    font-weight: 500;
+}
+
+/* Ajuste de responsividade para o botão voltar */
+@media (max-width: 768px) {
+    .back-button {
+        top: 15px;
+        left: 15px;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    .back-button i {
+        font-size: 1rem;
+    }
+}
+
+.policy-section .contact-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: var(--primary-color);
+    color: var(--white) !important;
+    text-decoration: none !important;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    justify-content: center;
+    margin: 0 auto;
 }
