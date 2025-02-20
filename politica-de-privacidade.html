@@ -157,13 +157,119 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
+    <!-- Modais de Suporte -->
+    <div id="faqModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Perguntas Frequentes</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="faq-search">
+                    <input type="text" placeholder="Buscar pergunta..." id="faqSearch">
+                </div>
+                <div class="faq-categories">
+                    <button class="faq-category active" data-category="geral">Geral</button>
+                    <button class="faq-category" data-category="produtos">Produtos</button>
+                    <button class="faq-category" data-category="pagamento">Pagamento</button>
+                </div>
+                <div class="faq-items">
+                    <!-- Perguntas Gerais -->
+                    <div class="faq-item" data-category="geral">
+                        <h3>Como faço para rastrear meu pedido?</h3>
+                        <p>Após a confirmação do envio, você receberá um e-mail com o código de rastreamento.</p>
+                    </div>
+                    <!-- Mais perguntas aqui -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="enviosModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Informações de Envio</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="shipping-info">
+                    <div class="shipping-section">
+                        <h3>Prazos de Entrega</h3>
+                        <ul>
+                            <li>Capitais: 2-3 dias úteis</li>
+                            <li>Interior: 3-5 dias úteis</li>
+                            <li>Regiões remotas: até 7 dias úteis</li>
+                        </ul>
+                    </div>
+                    <div class="shipping-section">
+                        <h3>Valores</h3>
+                        <p>Frete grátis para compras acima de R$ 299,90</p>
+                    </div>
+                    <a href="/envios.html" class="modal-link">Ver informações completas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contatoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Contato Rápido</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="quick-contact">
+                    <div class="contact-option">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <p>(11) 99999-9999</p>
+                        <a href="https://wa.me/5511999999999" target="_blank" class="contact-button">Enviar Mensagem</a>
+                    </div>
+                    <div class="contact-option">
+                        <i class="far fa-envelope"></i>
+                        <h3>E-mail</h3>
+                        <p>contato@allstar.com</p>
+                        <a href="mailto:contato@allstar.com" class="contact-button">Enviar E-mail</a>
+                    </div>
+                    <div class="contact-divider">
+                        <span>ou</span>
+                    </div>
+                    <a href="#contact" class="modal-link contact-form-link">Preencher Formulário de Contato</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/main.js"></script>
     <script>
         AOS.init({
             duration: 800,
             offset: 100,
-            once: true
+            once: false,
+            mirror: true,
+            easing: 'ease-out-cubic'
+        });
+    </script>
+    <script>
+        // Botão Voltar ao Topo
+        const backToTopButton = document.querySelector('.back-to-top');
+    
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+    
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     </script>
 </body>
