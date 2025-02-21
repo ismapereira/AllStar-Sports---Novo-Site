@@ -1,3 +1,190 @@
+/* Card base */
+.catalog-card {
+    position: relative;
+    height: 180px;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.catalog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Gradientes animados */
+.masc-theme .theme-background {
+    background: linear-gradient(135deg, #1a237e 0%, #0d47a1 50%, #1a237e 100%);
+    background-size: 200% 200%;
+    animation: gradientFlow 5s ease infinite;
+}
+
+.fem-theme .theme-background {
+    background: linear-gradient(135deg, #ad1457 0%, #e91e63 50%, #ad1457 100%);
+    background-size: 200% 200%;
+    animation: gradientFlow 5s ease infinite;
+}
+
+.kids-theme .theme-background {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ffd93d 50%, #ff6b6b 100%);
+    background-size: 200% 200%;
+    animation: gradientFlow 5s ease infinite;
+}
+
+.retro-theme .theme-background {
+    background: linear-gradient(135deg, #783f04 0%, #b45f06 50%, #783f04 100%);
+    background-size: 200% 200%;
+    animation: gradientFlow 5s ease infinite;
+}
+
+.nba-theme .theme-background {
+    background: linear-gradient(135deg, #c9082a 0%, #17408b 50%, #c9082a 100%);
+    background-size: 200% 200%;
+    animation: gradientFlow 5s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.theme-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.catalog-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.content-wrapper {
+    max-width: 70%;
+    position: relative;
+    z-index: 1;
+}
+
+.category-icon {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    opacity: 0.2;
+    transition: all 0.4s ease;
+}
+
+.catalog-card:hover .category-icon {
+    opacity: 0.4;
+    transform: translateY(-50%) rotate(5deg);
+}
+
+.catalog-overlay h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.catalog-card:hover .catalog-overlay h3 {
+    transform: translateY(-5px);
+}
+
+.catalog-overlay p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.catalog-card:hover .catalog-overlay p {
+    opacity: 0.9;
+}
+
+.view-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.catalog-card:hover .view-more {
+    animation: textPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+    0%, 100% {
+        opacity: 0.9;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.view-more i {
+    transition: transform 0.4s ease;
+}
+
+.catalog-card:hover .view-more i {
+    animation: arrowPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowPulse {
+    0%, 100% {
+        transform: translateX(0) scale(1);
+    }
+    50% {
+        transform: translateX(5px) scale(1.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog-card {
+        height: 120px;
+    }
+
+    .category-icon {
+        font-size: 2.5rem;
+        right: 1rem;
+    }
+
+    .catalog-overlay {
+        padding: 1rem;
+    }
+
+    .catalog-overlay h3 {
+        font-size: 1.4rem;
+    }
+
+    .catalog-overlay p {
+        font-size: 0.9rem;
+    }
+
+    .content-wrapper {
+        max-width: 85%;
+    }
+}
+
 /* Variáveis CSS com as cores da marca */
 :root {
     --primary-color: #00afef;
@@ -2354,12 +2541,13 @@ section {
     width: 100%;
     border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .catalog-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 .theme-background {
@@ -2370,50 +2558,6 @@ section {
     height: 100%;
 }
 
-/* Gradientes animados */
-.masc-theme .theme-background {
-    background: linear-gradient(90deg, #1a237e, #0d47a1, #1a237e);
-    background-size: 200% 100%;
-    animation: gradientMove 8s ease infinite;
-}
-
-.fem-theme .theme-background {
-    background: linear-gradient(90deg, #ad1457, #e91e63, #ad1457);
-    background-size: 200% 100%;
-    animation: gradientMove 8s ease infinite;
-}
-
-.kids-theme .theme-background {
-    background: linear-gradient(90deg, #ff6b6b, #ffd93d, #ff6b6b);
-    background-size: 200% 100%;
-    animation: gradientMove 8s ease infinite;
-}
-
-.retro-theme .theme-background {
-    background: linear-gradient(90deg, #783f04, #b45f06, #783f04);
-    background-size: 200% 100%;
-    animation: gradientMove 8s ease infinite;
-}
-
-.nba-theme .theme-background {
-    background: linear-gradient(90deg, #c9082a, #17408b, #c9082a);
-    background-size: 200% 100%;
-    animation: gradientMove 8s ease infinite;
-}
-
-@keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Layout e Conteúdo */
 .catalog-overlay {
     position: absolute;
     top: 0;
@@ -2440,12 +2584,12 @@ section {
     transform: translateY(-50%);
     font-size: 4rem;
     opacity: 0.2;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .catalog-card:hover .category-icon {
-    opacity: 0.3;
-    transform: translateY(-50%) scale(1.1);
+    opacity: 0.4;
+    transform: translateY(-50%) rotate(5deg);
 }
 
 .catalog-overlay h3 {
@@ -2454,9 +2598,17 @@ section {
     font-weight: 600;
 }
 
+.catalog-card:hover .catalog-overlay h3 {
+    transform: translateY(-5px);
+}
+
 .catalog-overlay p {
     font-size: 1.1rem;
     margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.catalog-card:hover .catalog-overlay p {
     opacity: 0.9;
 }
 
@@ -2466,20 +2618,37 @@ section {
     gap: 0.5rem;
     font-size: 1.1rem;
     color: var(--white);
-    opacity: 0.8;
-    transition: all 0.3s ease;
+    opacity: 0.9;
 }
 
 .catalog-card:hover .view-more {
-    opacity: 1;
+    animation: textPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+    0%, 100% {
+        opacity: 0.9;
+    }
+    50% {
+        opacity: 1;
+    }
 }
 
 .view-more i {
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .catalog-card:hover .view-more i {
-    transform: translateX(5px);
+    animation: arrowPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowPulse {
+    0%, 100% {
+        transform: translateX(0) scale(1);
+    }
+    50% {
+        transform: translateX(5px) scale(1.1);
+    }
 }
 
 @media (max-width: 768px) {
@@ -2517,66 +2686,12 @@ section {
     transform: translateY(-50%);
     font-size: 4rem;
     opacity: 0.2;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .catalog-card:hover .category-icon {
-    opacity: 0.3;
-    transform: translateY(-50%) scale(1.1);
-}
-
-/* Efeito de Partículas */
-.particles-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    opacity: 0.1;
-}
-
-.particles-bg canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-}
-
-/* Layout do Conteúdo */
-.content-wrapper {
-    max-width: 70%;
-    position: relative;
-    z-index: 1;
-}
-
-.catalog-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 2rem;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
-    color: var(--white);
-    display: flex;
-    align-items: center;
-}
-
-.category-icon {
-    position: absolute;
-    right: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 4rem;
-    opacity: 0.2;
-    transition: all 0.3s ease;
-}
-
-.catalog-card:hover .category-icon {
-    opacity: 0.3;
-    transform: translateY(-50%) scale(1.1);
+    opacity: 0.4;
+    transform: translateY(-50%) rotate(5deg);
 }
 
 .catalog-overlay h3 {
@@ -2585,9 +2700,17 @@ section {
     font-weight: 600;
 }
 
+.catalog-card:hover .catalog-overlay h3 {
+    transform: translateY(-5px);
+}
+
 .catalog-overlay p {
     font-size: 1.1rem;
     margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.catalog-card:hover .catalog-overlay p {
     opacity: 0.9;
 }
 
@@ -2597,20 +2720,37 @@ section {
     gap: 0.5rem;
     font-size: 1.1rem;
     color: var(--white);
-    opacity: 0.8;
-    transition: all 0.3s ease;
+    opacity: 0.9;
 }
 
 .catalog-card:hover .view-more {
-    opacity: 1;
+    animation: textPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+    0%, 100% {
+        opacity: 0.9;
+    }
+    50% {
+        opacity: 1;
+    }
 }
 
 .view-more i {
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .catalog-card:hover .view-more i {
-    transform: translateX(5px);
+    animation: arrowPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowPulse {
+    0%, 100% {
+        transform: translateX(0) scale(1);
+    }
+    50% {
+        transform: translateX(5px) scale(1.1);
+    }
 }
 
 @media (max-width: 768px) {
@@ -2647,62 +2787,55 @@ section {
     width: 100%;
     border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .catalog-card:hover {
-    transform: translateY(-5px);
-}
-
-.theme-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* Gradientes animados */
 .masc-theme .theme-background {
-    background: linear-gradient(90deg, #1a237e, #0d47a1, #1a237e);
-    background-size: 200% 100%;
-    animation: gradientMove 8s ease infinite;
+    background: linear-gradient(135deg, #1a237e 0%, #0d47a1 50%, #1a237e 100%);
+    background-size: 200% 200%;
+    animation: gradientFlow 5s ease infinite;
 }
 
 .fem-theme .theme-background {
-    background: linear-gradient(90deg, #ad1457, #e91e63, #ad1457);
-    background-size: 200% 100%;
-    animation: gradientMove 8s ease infinite;
+    background: linear-gradient(135deg, #ad1457 0%, #e91e63 50%, #ad1457 100%);
+    background-size: 200% 200%;
+    animation: gradientFlow 5s ease infinite;
 }
 
 .kids-theme .theme-background {
-    background: linear-gradient(90deg, #ff6b6b, #ffd93d, #ff6b6b);
-    background-size: 200% 100%;
-    animation: gradientMove 8s ease infinite;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ffd93d 50%, #ff6b6b 100%);
+    background-size: 200% 200%;
+    animation: gradientFlow 5s ease infinite;
 }
 
 .retro-theme .theme-background {
-    background: linear-gradient(90deg, #783f04, #b45f06, #783f04);
-    background-size: 200% 100%;
-    animation: gradientMove 8s ease infinite;
+    background: linear-gradient(135deg, #783f04 0%, #b45f06 50%, #783f04 100%);
+    background-size: 200% 200%;
+    animation: gradientFlow 5s ease infinite;
 }
 
 .nba-theme .theme-background {
-    background: linear-gradient(90deg, #c9082a, #17408b, #c9082a);
-    background-size: 200% 100%;
-    animation: gradientMove 8s ease infinite;
+    background: linear-gradient(135deg, #c9082a 0%, #17408b 50%, #c9082a 100%);
+    background-size: 200% 200%;
+    animation: gradientFlow 5s ease infinite;
 }
 
-@keyframes gradientMove {
+@keyframes gradientFlow {
     0% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
     }
     50% {
-        background-position: 100% 50%;
+        background-position: 100% 100%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
     }
 }
 
@@ -2732,12 +2865,12 @@ section {
     transform: translateY(-50%);
     font-size: 4rem;
     opacity: 0.2;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .catalog-card:hover .category-icon {
-    opacity: 0.3;
-    transform: translateY(-50%) scale(1.1);
+    opacity: 0.4;
+    transform: translateY(-50%) rotate(5deg);
 }
 
 .catalog-overlay h3 {
@@ -2746,9 +2879,17 @@ section {
     font-weight: 600;
 }
 
+.catalog-card:hover .catalog-overlay h3 {
+    transform: translateY(-5px);
+}
+
 .catalog-overlay p {
     font-size: 1.1rem;
     margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.catalog-card:hover .catalog-overlay p {
     opacity: 0.9;
 }
 
@@ -2758,20 +2899,37 @@ section {
     gap: 0.5rem;
     font-size: 1.1rem;
     color: var(--white);
-    opacity: 0.8;
-    transition: all 0.3s ease;
+    opacity: 0.9;
 }
 
 .catalog-card:hover .view-more {
-    opacity: 1;
+    animation: textPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+    0%, 100% {
+        opacity: 0.9;
+    }
+    50% {
+        opacity: 1;
+    }
 }
 
 .view-more i {
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .catalog-card:hover .view-more i {
-    transform: translateX(5px);
+    animation: arrowPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowPulse {
+    0%, 100% {
+        transform: translateX(0) scale(1);
+    }
+    50% {
+        transform: translateX(5px) scale(1.1);
+    }
 }
 
 @media (max-width: 768px) {
