@@ -153,15 +153,15 @@ O site é totalmente responsivo e se adapta aos seguintes dispositivos:
 
 ## 🎨 Paleta de Cores
 
-- ![#00AFEF](https://via.placeholder.com/15/00AFEF/000000?text=+) `#00AFEF` - Cor Primária
+- ![#00AFEF](https://placehold.co/15x15/00AFEF/00AFEF.png) `#00AFEF` - Cor Primária
   > Energia e modernidade
-- ![#001E5A](https://via.placeholder.com/15/001E5A/000000?text=+) `#001E5A` - Cor Secundária
+- ![#001E5A](https://placehold.co/15x15/001E5A/001E5A.png) `#001E5A` - Cor Secundária
   > Profissionalismo e confiança
-- ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `#FFFFFF` - Branco
+- ![#FFFFFF](https://placehold.co/15x15/FFFFFF/FFFFFF.png) `#FFFFFF` - Branco
   > Clareza e simplicidade
-- ![#0A0A0A](https://via.placeholder.com/15/0A0A0A/000000?text=+) `#0A0A0A` - Escuro
+- ![#0A0A0A](https://placehold.co/15x15/0A0A0A/0A0A0A.png) `#0A0A0A` - Escuro
   > Elegância e sofisticação
-- ![#050505](https://via.placeholder.com/15/050505/000000?text=+) `#050505` - Mais Escuro
+- ![#050505](https://placehold.co/15x15/050505/050505.png) `#050505` - Mais Escuro
   > Profundidade e contraste
 
 ## 📝 Licença
@@ -184,16 +184,19 @@ Contribuições são sempre bem-vindas! Por favor, leia as [diretrizes de contri
 Feito com ❤️ por [Ismael](https://github.com/ismapereira)
 
 <div align="center">
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ismael-pereira-feitosa-ba2aa91a9/)
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ismapereira)
-  [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ismapereira.github.io/Portifolio-Ismael-Pereira/)
-  [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ismaelpereirafeitosa@hotmail.com)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ismael-pereira-feitosa-ba2aa91a9/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ismapereira)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ismapereira.github.io/Portifolio-Ismael-Pereira/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ismaelpereirafeitosa@hotmail.com)
+
 </div>
 
 ---
 
 <div align="center">
-  
-[![Visitors](https://visitor-badge.glitch.me/badge?page_id=ismapereira.AllStar-Sports---Novo-Site)](https://github.com/ismapereira/AllStar-Sports---Novo-Site)
+
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=ismapereira.AllStar-Sports---Novo-Site)
 [![Last Updated](https://img.shields.io/github/last-commit/ismapereira/AllStar-Sports---Novo-Site?style=flat&label=Última%20Atualização&color=success)](https://github.com/ismapereira/AllStar-Sports---Novo-Site)
+
 </div>
