@@ -198,5 +198,11 @@ Feito com ❤️ por [Ismael](https://github.com/ismapereira)
 
 ![Visitors](https://komarev.com/ghpvc/?username=ismapereira&repo=AllStar-Sports---Novo-Site&color=blue&style=flat)
 [![Last Updated](https://img.shields.io/github/last-commit/ismapereira/AllStar-Sports---Novo-Site?style=flat&label=Última%20Atualização&color=success)](https://github.com/ismapereira/AllStar-Sports---Novo-Site)
+[![Repo Size](https://img.shields.io/github/repo-size/ismapereira/AllStar-Sports---Novo-Site?style=flat&label=Tamanho&color=orange)](https://github.com/ismapereira/AllStar-Sports---Novo-Site)
+[![Stars](https://img.shields.io/github/stars/ismapereira/AllStar-Sports---Novo-Site?style=flat&color=yellow)](https://github.com/ismapereira/AllStar-Sports---Novo-Site/stargazers)
+[![Forks](https://img.shields.io/github/forks/ismapereira/AllStar-Sports---Novo-Site?style=flat&color=purple)](https://github.com/ismapereira/AllStar-Sports---Novo-Site/network/members)
+[![Issues](https://img.shields.io/github/issues/ismapereira/AllStar-Sports---Novo-Site?style=flat&color=red)](https://github.com/ismapereira/AllStar-Sports---Novo-Site/issues)
+[![Website](https://img.shields.io/website?url=https://ismapereira.github.io/AllStar-Sports---Novo-Site/&style=flat&label=Website&logo=github&color=green)](https://ismapereira.github.io/AllStar-Sports---Novo-Site/)
+[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/ismapereira)
 
 </div>
