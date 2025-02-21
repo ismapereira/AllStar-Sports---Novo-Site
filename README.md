@@ -196,7 +196,7 @@ Feito com ❤️ por [Ismael](https://github.com/ismapereira)
 
 <div align="center">
 
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=ismapereira.AllStar-Sports---Novo-Site)
+![Visitors](https://komarev.com/ghpvc/?username=ismapereira&repo=AllStar-Sports---Novo-Site&color=blue&style=flat)
 [![Last Updated](https://img.shields.io/github/last-commit/ismapereira/AllStar-Sports---Novo-Site?style=flat&label=Última%20Atualização&color=success)](https://github.com/ismapereira/AllStar-Sports---Novo-Site)
 
 </div>
