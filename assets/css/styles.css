@@ -1174,11 +1174,6 @@ textarea.form-control {
         font-size: 0.9rem;
     }
 
-    .wholesale-table th,
-    .wholesale-table td {
-        padding: 0.8rem 1rem;
-    }
-
     .contact-form {
         padding: 2rem;
     }
@@ -2064,8 +2059,8 @@ section {
     display: inline-block;
     padding: 8px 20px;
     background: var(--primary-color);
-    color: var(--white);
-    text-decoration: none;
+    color: var(--white) !important;
+    text-decoration: none !important;
     border-radius: 20px;
     transition: background 0.3s ease;
 }
@@ -2339,5 +2334,469 @@ section {
     .contact-buttons .contact-button {
         width: 80%;
         margin: 0;
+    }
+}
+
+/* Estilos do Catálogo */
+.catalog-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.catalog-card {
+    position: relative;
+    height: 180px;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.catalog-card:hover {
+    transform: translateY(-5px);
+}
+
+.theme-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Gradientes animados */
+.masc-theme .theme-background {
+    background: linear-gradient(90deg, #1a237e, #0d47a1, #1a237e);
+    background-size: 200% 100%;
+    animation: gradientMove 8s ease infinite;
+}
+
+.fem-theme .theme-background {
+    background: linear-gradient(90deg, #ad1457, #e91e63, #ad1457);
+    background-size: 200% 100%;
+    animation: gradientMove 8s ease infinite;
+}
+
+.kids-theme .theme-background {
+    background: linear-gradient(90deg, #ff6b6b, #ffd93d, #ff6b6b);
+    background-size: 200% 100%;
+    animation: gradientMove 8s ease infinite;
+}
+
+.retro-theme .theme-background {
+    background: linear-gradient(90deg, #783f04, #b45f06, #783f04);
+    background-size: 200% 100%;
+    animation: gradientMove 8s ease infinite;
+}
+
+.nba-theme .theme-background {
+    background: linear-gradient(90deg, #c9082a, #17408b, #c9082a);
+    background-size: 200% 100%;
+    animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Layout e Conteúdo */
+.catalog-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.content-wrapper {
+    max-width: 70%;
+    position: relative;
+    z-index: 1;
+}
+
+.category-icon {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    opacity: 0.2;
+    transition: all 0.3s ease;
+}
+
+.catalog-card:hover .category-icon {
+    opacity: 0.3;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.catalog-overlay h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.catalog-overlay p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.view-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--white);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.catalog-card:hover .view-more {
+    opacity: 1;
+}
+
+.view-more i {
+    transition: transform 0.3s ease;
+}
+
+.catalog-card:hover .view-more i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .catalog-card {
+        height: 120px;
+    }
+
+    .category-icon {
+        font-size: 2.5rem;
+        right: 1rem;
+    }
+
+    .catalog-overlay {
+        padding: 1rem;
+    }
+
+    .catalog-overlay h3 {
+        font-size: 1.4rem;
+    }
+
+    .catalog-overlay p {
+        font-size: 0.9rem;
+    }
+
+    .content-wrapper {
+        max-width: 85%;
+    }
+}
+
+/* Ícones das Categorias */
+.category-icon {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    opacity: 0.2;
+    transition: all 0.3s ease;
+}
+
+.catalog-card:hover .category-icon {
+    opacity: 0.3;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Efeito de Partículas */
+.particles-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.1;
+}
+
+.particles-bg canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Layout do Conteúdo */
+.content-wrapper {
+    max-width: 70%;
+    position: relative;
+    z-index: 1;
+}
+
+.catalog-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.category-icon {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    opacity: 0.2;
+    transition: all 0.3s ease;
+}
+
+.catalog-card:hover .category-icon {
+    opacity: 0.3;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.catalog-overlay h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.catalog-overlay p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.view-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--white);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.catalog-card:hover .view-more {
+    opacity: 1;
+}
+
+.view-more i {
+    transition: transform 0.3s ease;
+}
+
+.catalog-card:hover .view-more i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .catalog-card {
+        height: 120px;
+    }
+
+    .category-icon {
+        font-size: 2.5rem;
+        right: 1rem;
+    }
+
+    .catalog-overlay {
+        padding: 1rem;
+    }
+
+    .catalog-overlay h3 {
+        font-size: 1.4rem;
+    }
+
+    .catalog-overlay p {
+        font-size: 0.9rem;
+    }
+
+    .content-wrapper {
+        max-width: 85%;
+    }
+}
+
+/* Card base */
+.catalog-card {
+    position: relative;
+    height: 180px;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.catalog-card:hover {
+    transform: translateY(-5px);
+}
+
+.theme-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Gradientes animados */
+.masc-theme .theme-background {
+    background: linear-gradient(90deg, #1a237e, #0d47a1, #1a237e);
+    background-size: 200% 100%;
+    animation: gradientMove 8s ease infinite;
+}
+
+.fem-theme .theme-background {
+    background: linear-gradient(90deg, #ad1457, #e91e63, #ad1457);
+    background-size: 200% 100%;
+    animation: gradientMove 8s ease infinite;
+}
+
+.kids-theme .theme-background {
+    background: linear-gradient(90deg, #ff6b6b, #ffd93d, #ff6b6b);
+    background-size: 200% 100%;
+    animation: gradientMove 8s ease infinite;
+}
+
+.retro-theme .theme-background {
+    background: linear-gradient(90deg, #783f04, #b45f06, #783f04);
+    background-size: 200% 100%;
+    animation: gradientMove 8s ease infinite;
+}
+
+.nba-theme .theme-background {
+    background: linear-gradient(90deg, #c9082a, #17408b, #c9082a);
+    background-size: 200% 100%;
+    animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.catalog-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.content-wrapper {
+    max-width: 70%;
+    position: relative;
+    z-index: 1;
+}
+
+.category-icon {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    opacity: 0.2;
+    transition: all 0.3s ease;
+}
+
+.catalog-card:hover .category-icon {
+    opacity: 0.3;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.catalog-overlay h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.catalog-overlay p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.view-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--white);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.catalog-card:hover .view-more {
+    opacity: 1;
+}
+
+.view-more i {
+    transition: transform 0.3s ease;
+}
+
+.catalog-card:hover .view-more i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .catalog-card {
+        height: 120px;
+    }
+
+    .category-icon {
+        font-size: 2.5rem;
+        right: 1rem;
+    }
+
+    .catalog-overlay {
+        padding: 1rem;
+    }
+
+    .catalog-overlay h3 {
+        font-size: 1.4rem;
+    }
+
+    .catalog-overlay p {
+        font-size: 0.9rem;
+    }
+
+    .content-wrapper {
+        max-width: 85%;
     }
 }
