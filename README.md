@@ -11,7 +11,7 @@
 [![Status](https://img.shields.io/badge/Status-Em_Desenvolvimento-red?style=for-the-badge)](https://github.com/ismapereira)
 
 <div align="center">
-  <img src="https://media.giphy.com/media/3oEdv4hwWTzBhWvaU0/giphy.gif" alt="Basketball Animation" width="300px">
+  <img src="./assets/images/capa.png" alt="AllStar Sports - Capa do Projeto" width="100%">
 </div>
 
 ## 📋 Sobre o Projeto
@@ -184,9 +184,6 @@ Contribuições são sempre bem-vindas! Por favor, leia as [diretrizes de contri
 Feito com ❤️ por [Ismael](https://github.com/ismapereira)
 
 <div align="center">
-  <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Code Animation" width="200px">
-  <br><br>
-  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ismael-pereira-feitosa-ba2aa91a9/)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ismapereira)
   [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ismapereira.github.io/Portifolio-Ismael-Pereira/)
@@ -197,8 +194,6 @@ Feito com ❤️ por [Ismael](https://github.com/ismapereira)
 
 <div align="center">
   
-[![Visitors](https://visitor-badge.glitch.me/badge?page_id=ismapereira.allstar-sports)](https://github.com/ismapereira/AllStar-Sports---Novo-Site)
-[![Last Updated](https://img.shields.io/github/last-commit/ismapereira/allstar-sports?style=flat&label=Última%20Atualização&color=success)](https://github.com/ismapereira/AllStar-Sports---Novo-Site)
-[![Stars](https://img.shields.io/github/stars/ismapereira/allstar-sports?style=social)](https://github.com/ismapereira/AllStar-Sports---Novo-Site)
-
+[![Visitors](https://visitor-badge.glitch.me/badge?page_id=ismapereira.AllStar-Sports---Novo-Site)](https://github.com/ismapereira/AllStar-Sports---Novo-Site)
+[![Last Updated](https://img.shields.io/github/last-commit/ismapereira/AllStar-Sports---Novo-Site?style=flat&label=Última%20Atualização&color=success)](https://github.com/ismapereira/AllStar-Sports---Novo-Site)
 </div>
