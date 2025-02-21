@@ -202,7 +202,7 @@ Feito com ❤️ por [Ismael](https://github.com/ismapereira)
 [![Stars](https://img.shields.io/github/stars/ismapereira/AllStar-Sports---Novo-Site?style=flat&color=yellow)](https://github.com/ismapereira/AllStar-Sports---Novo-Site/stargazers)
 [![Forks](https://img.shields.io/github/forks/ismapereira/AllStar-Sports---Novo-Site?style=flat&color=purple)](https://github.com/ismapereira/AllStar-Sports---Novo-Site/network/members)
 [![Issues](https://img.shields.io/github/issues/ismapereira/AllStar-Sports---Novo-Site?style=flat&color=red)](https://github.com/ismapereira/AllStar-Sports---Novo-Site/issues)
-[![Website](https://img.shields.io/website?url=https://ismapereira.github.io/AllStar-Sports---Novo-Site/&style=flat&label=Website&logo=github&color=green)](https://ismapereira.github.io/AllStar-Sports---Novo-Site/)
+[![Website](https://img.shields.io/website?url=https://ismapereira.github.io/AllStar-Sports---Novo-Site/&style=flat&label=Website&logo=github&color=green)](https://allstarsports.vercel.app/)
 [![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/ismapereira)
 
 </div>
