@@ -83,7 +83,13 @@ A AllStar Sports Store é uma loja online especializada em artigos esportivos, c
 - Sistema de preços dinâmico
 
 ### 📞 Contato
-- Formulário de contato
+- Formulário de contato funcional
+- Integração com EmailJS
+- Envio de mensagens em tempo real
+- Validação de campos
+- Feedback visual de envio
+- Tratamento de erros
+- Desabilitação temporária do botão durante o envio
 - Tabela de preços para atacado
 - Informações de contato
 - Validação em tempo real
