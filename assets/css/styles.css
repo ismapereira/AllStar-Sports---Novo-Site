@@ -1701,7 +1701,7 @@ img.loaded {
     color: var(--white);
     border: none;
     border-radius: 50%;
-    cursor: auto;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
