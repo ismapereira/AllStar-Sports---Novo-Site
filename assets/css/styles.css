@@ -2763,14 +2763,14 @@ section {
     }
 
     .wholesale-table {
-        font-size: 10px;
+        font-size: 14px;
         width: 100%;
         margin: 10px 0;
     }
 
     .wholesale-table th,
     .wholesale-table td {
-        padding: 4px;
+        padding: 8px;
         white-space: normal;
     }
 
