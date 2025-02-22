@@ -8,17 +8,28 @@ function sendEmail(event) {
     event.preventDefault();
 
     // Coletar dados do formulário
+    const contactForm = document.getElementById('contactForm');
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
     const city = document.getElementById('city').value;
     const message = document.getElementById('message').value;
+    const submitButton = document.querySelector('#contactForm button[type="submit"]');
 
     // Validação básica
     if (!name || !email || !phone || !city) {
         alert('Por favor, preencha todos os campos obrigatórios.');
         return;
     }
+
+    // Criar elemento de animação de bola de futebol
+    const loadingElement = document.createElement('div');
+    loadingElement.classList.add('soccer-ball-loader');
+    loadingElement.innerHTML = '⚽';
+
+    // Esconder botão e mostrar animação
+    submitButton.style.display = 'none';
+    contactForm.appendChild(loadingElement);
 
     // Parâmetros para o template de e-mail
     const templateParams = {
@@ -29,25 +40,41 @@ function sendEmail(event) {
         message: message || 'Sem mensagem adicional'
     };
 
-    // Desabilitar botão durante o envio
-    const submitButton = document.querySelector('#contactForm button[type="submit"]');
-    submitButton.disabled = true;
-    submitButton.textContent = 'Enviando...';
-
     // Enviar e-mail usando EmailJS
     emailjs.send('service_uycdg4y', 'template_84dxhm9', templateParams)
         .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-            document.getElementById('contactForm').reset();
+            // Remover animação de carregamento
+            loadingElement.remove();
+
+            // Criar elemento de confirmação
+            const confirmationElement = document.createElement('div');
+            confirmationElement.classList.add('form-confirmation');
+            confirmationElement.textContent = 'Mensagem enviada com sucesso!';
+            contactForm.appendChild(confirmationElement);
+
+            // Resetar formulário após 3 segundos
+            setTimeout(() => {
+                contactForm.reset();
+                confirmationElement.remove();
+                submitButton.style.display = 'block';
+            }, 3000);
         }, function(error) {
-            console.log('FAILED...', error);
-            alert('Erro ao enviar mensagem. Por favor, tente novamente.');
-        })
-        .finally(function() {
-            // Reabilitar botão
-            submitButton.disabled = false;
-            submitButton.textContent = 'Enviar Mensagem';
+            // Remover animação de carregamento
+            loadingElement.remove();
+
+            // Criar elemento de erro
+            const errorElement = document.createElement('div');
+            errorElement.classList.add('form-error');
+            errorElement.textContent = 'Erro ao enviar mensagem. Tente novamente.';
+            contactForm.appendChild(errorElement);
+
+            // Mostrar botão novamente
+            submitButton.style.display = 'block';
+
+            // Remover mensagem de erro após 3 segundos
+            setTimeout(() => {
+                errorElement.remove();
+            }, 3000);
         });
 }
 

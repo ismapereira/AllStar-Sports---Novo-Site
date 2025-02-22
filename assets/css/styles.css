@@ -2958,3 +2958,35 @@ section {
         max-width: 85%;
     }
 }
+
+.soccer-ball-loader {
+    font-size: 40px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.form-confirmation, 
+.form-error {
+    text-align: center;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.form-confirmation {
+    background-color: rgba(0, 175, 239, 0.1);
+    color: #00AFEF;
+}
+
+.form-error {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #FF0000;
+}
