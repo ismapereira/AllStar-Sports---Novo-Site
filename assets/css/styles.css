@@ -2252,6 +2252,7 @@ section {
     background-color: rgba(0, 0, 0, 0);
     overflow-y: auto;
     transition: background-color 0.3s ease;
+    overflow: hidden;
 }
 
 .modal.active {
@@ -2271,6 +2272,7 @@ section {
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 75vh;
 }
 
 .modal.active .modal-content {
@@ -2308,6 +2310,8 @@ section {
 
 .modal-body {
     color: var(--white);
+    overflow-y: auto;
+    max-height: calc(75vh - 110px);
 }
 
 /* FAQ Modal */
