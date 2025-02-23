@@ -166,7 +166,7 @@
                 
                 <div class="products-grid">
                     <!-- Camisa Fan Masculina -->
-                    <div class="product-card" data-aos="fade-up">
+                    <div class="product-card" data-aos="fade-up" data-product-type="camisas-masculinas">
                         <div class="product-image">
                             <img src="assets/images/products/fan-masc.jpg" alt="Camisa Fan Masculina">
                         </div>
@@ -189,7 +189,7 @@
                     </div>
 
                     <!-- Camisa Fan Feminina -->
-                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="100" data-product-type="camisas-femininas">
                         <div class="product-image">
                             <img src="assets/images/products/fan-fem.jpg" alt="Camisa Fan Feminina">
                         </div>
@@ -201,7 +201,6 @@
                                 Perfeita para todas as ocasiões.
                             </p>
                             <div class="product-sizes">
-                                <span class="size-tag">PP</span>
                                 <span class="size-tag">P</span>
                                 <span class="size-tag">M</span>
                                 <span class="size-tag">G</span>
@@ -211,7 +210,7 @@
                     </div>
 
                     <!-- Camisa Player -->
-                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="200" data-product-type="versao-player">
                         <div class="product-image">
                             <img src="assets/images/products/player.jpg" alt="Camisa Player">
                         </div>
@@ -234,7 +233,7 @@
                     </div>
 
                     <!-- Kit Infantil -->
-                    <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="300" data-product-type="kit-infantil">
                         <div class="product-image">
                             <img src="assets/images/products/infantil.jpg" alt="Kit Infantil">
                         </div>
@@ -258,7 +257,7 @@
                         </div>
                     </div>
                     <!-- Camisa Retrô -->
-                    <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="400" data-product-type="camisas-retro">
                         <div class="product-image">
                             <img src="assets/images/products/retro.jpg" alt="Camisa Retrô">
                         </div>
@@ -280,7 +279,7 @@
                     </div>
     
                     <!-- Camisa NBA -->
-                    <div class="product-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="500" data-product-type="camisas-nba">
                         <div class="product-image">
                             <img src="assets/images/products/nba.jpg" alt="Camisa NBA">
                         </div>
@@ -713,36 +712,36 @@
                                         <td>M</td>
                                         <td>71-73</td>
                                         <td>55-57</td>
-                                        <td>170-176</td>
-                                        <td>62-78</td>
+                                        <td>170-175</td>
+                                        <td>62-75</td>
                                     </tr>
                                     <tr>
                                         <td>G</td>
                                         <td>73-75</td>
                                         <td>57-58</td>
-                                        <td>176-182</td>
-                                        <td>78-83</td>
+                                        <td>175-180</td>
+                                        <td>75-80</td>
                                     </tr>
                                     <tr>
                                         <td>GG</td>
                                         <td>75-78</td>
                                         <td>58-60</td>
-                                        <td>182-190</td>
-                                        <td>83-90</td>
+                                        <td>180-185</td>
+                                        <td>80-85</td>
                                     </tr>
                                     <tr>
                                         <td>2XL</td>
                                         <td>78-81</td>
                                         <td>60-62</td>
-                                        <td>190-195</td>
-                                        <td>90-97</td>
+                                        <td>185-190</td>
+                                        <td>85-90</td>
                                     </tr>
                                     <tr>
                                         <td>3XL</td>
                                         <td>81-83</td>
                                         <td>62-64</td>
-                                        <td>192-197</td>
-                                        <td>97-104</td>
+                                        <td>190-195</td>
+                                        <td>90-95</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1035,6 +1034,27 @@
                     <div class="size-notes">
                         <p><i class="fas fa-thumbtack"></i> Margem de erro: 1-3 cm em cada medida</p>
                         <p><i class="fas fa-info-circle"></i> Obs.: As medidas estão em centímetros (cm) e quilogramas (kg).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para medidas específicas -->
+    <div id="medidasEspecificasModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Medidas do Tamanho <span id="tamanhoSelecionado"></span></h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="sizes-guide">
+                    <div class="size-section">
+                        <div class="table-wrapper">
+                            <table class="sizes-table" id="tabelaMedidasEspecificas">
+                                <!-- O conteúdo será preenchido dinamicamente via JavaScript -->
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

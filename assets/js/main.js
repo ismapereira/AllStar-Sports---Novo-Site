@@ -344,3 +344,293 @@ document.querySelectorAll('.floating-nav a').forEach(anchor => {
         }
     });
 });
+
+// Dados das medidas para cada tipo de produto e tamanho
+const medidasProdutos = {
+    'camisas-masculinas': {
+        'P': {
+            'Comprimento (cm)': '69-71',
+            'Largura (cm)': '53-55',
+            'Altura (cm)': '162-170',
+            'Peso (kg)': '50-62'
+        },
+        'M': {
+            'Comprimento (cm)': '71-73',
+            'Largura (cm)': '55-57',
+            'Altura (cm)': '170-175',
+            'Peso (kg)': '62-75'
+        },
+        'G': {
+            'Comprimento (cm)': '73-75',
+            'Largura (cm)': '57-58',
+            'Altura (cm)': '175-180',
+            'Peso (kg)': '75-80'
+        },
+        'GG': {
+            'Comprimento (cm)': '75-78',
+            'Largura (cm)': '58-60',
+            'Altura (cm)': '180-185',
+            'Peso (kg)': '80-85'
+        },
+        '2XL': {
+            'Comprimento (cm)': '78-81',
+            'Largura (cm)': '60-62',
+            'Altura (cm)': '185-190',
+            'Peso (kg)': '85-90'
+        },
+        '3XL': {
+            'Comprimento (cm)': '81-83',
+            'Largura (cm)': '62-64',
+            'Altura (cm)': '190-195',
+            'Peso (kg)': '90-95'
+        }
+    },
+    'camisas-femininas': {
+        'P': {
+            'Comprimento (cm)': '61-63',
+            'Largura (cm)': '40-41',
+            'Altura (cm)': '150-160'
+        },
+        'M': {
+            'Comprimento (cm)': '63-66',
+            'Largura (cm)': '41-44',
+            'Altura (cm)': '160-165'
+        },
+        'G': {
+            'Comprimento (cm)': '66-69',
+            'Largura (cm)': '44-47',
+            'Altura (cm)': '165-170'
+        },
+        'GG': {
+            'Comprimento (cm)': '69-71',
+            'Largura (cm)': '47-50',
+            'Altura (cm)': '170-175'
+        }
+    },
+    'jerseys-nba': {
+        'P': {
+            'Tórax (cm)': '94-99',
+            'Cintura (cm)': '79-84',
+            'Quadril (cm)': '94-99'
+        },
+        'M': {
+            'Tórax (cm)': '99-104',
+            'Cintura (cm)': '84-89',
+            'Quadril (cm)': '99-104'
+        },
+        'G': {
+            'Tórax (cm)': '104-109',
+            'Cintura (cm)': '89-94',
+            'Quadril (cm)': '104-109'
+        },
+        'GG': {
+            'Tórax (cm)': '109-117',
+            'Cintura (cm)': '94-102',
+            'Quadril (cm)': '109-117'
+        },
+        '2XL': {
+            'Tórax (cm)': '117-134',
+            'Cintura (cm)': '102-109',
+            'Quadril (cm)': '117-134'
+        }
+    },
+    'versao-player': {
+        'P': {
+            'Comprimento (cm)': '67-69',
+            'Largura (cm)': '49-51',
+            'Altura (cm)': '162-170',
+            'Peso (kg)': '50-62'
+        },
+        'M': {
+            'Comprimento (cm)': '69-71',
+            'Largura (cm)': '51-53',
+            'Altura (cm)': '170-175',
+            'Peso (kg)': '62-75'
+        },
+        'G': {
+            'Comprimento (cm)': '71-73',
+            'Largura (cm)': '53-55',
+            'Altura (cm)': '175-180',
+            'Peso (kg)': '75-80'
+        },
+        'GG': {
+            'Comprimento (cm)': '73-76',
+            'Largura (cm)': '55-57',
+            'Altura (cm)': '180-185',
+            'Peso (kg)': '80-85'
+        },
+        '2XL': {
+            'Comprimento (cm)': '76-78',
+            'Largura (cm)': '57-60',
+            'Altura (cm)': '185-190',
+            'Peso (kg)': '85-90'
+        },
+        '3XL': {
+            'Comprimento (cm)': '78-79',
+            'Largura (cm)': '60-63',
+            'Altura (cm)': '190-195',
+            'Peso (kg)': '90-95'
+        }
+    },
+    'camisas-retro': {
+        'P': {
+            'Largura (cm)': '48',
+            'Comprimento (cm)': '67',
+            'Altura (cm)': '160-165'
+        },
+        'M': {
+            'Largura (cm)': '50',
+            'Comprimento (cm)': '70',
+            'Altura (cm)': '165-170'
+        },
+        'G': {
+            'Largura (cm)': '52.5',
+            'Comprimento (cm)': '73.5',
+            'Altura (cm)': '170-175'
+        },
+        'GG': {
+            'Largura (cm)': '55',
+            'Comprimento (cm)': '77',
+            'Altura (cm)': '175-178'
+        },
+        '2XL': {
+            'Largura (cm)': '57',
+            'Comprimento (cm)': '80',
+            'Altura (cm)': '179-184'
+        }
+    },
+    'kit-infantil': {
+        '14': {
+            'Idade': '2-3',
+            'Altura (cm)': '85-95',
+            'Comprimento (cm)': '41-44',
+            'Largura (cm)': '33-35',
+            'Cintura (cm)': '19-36'
+        },
+        '16': {
+            'Idade': '3-4',
+            'Altura (cm)': '95-105',
+            'Comprimento (cm)': '44-47',
+            'Largura (cm)': '35-37',
+            'Cintura (cm)': '20-37'
+        },
+        '18': {
+            'Idade': '4-5',
+            'Altura (cm)': '105-115',
+            'Comprimento (cm)': '47-50',
+            'Largura (cm)': '37-39',
+            'Cintura (cm)': '21-39'
+        },
+        '20': {
+            'Idade': '5-6',
+            'Altura (cm)': '115-125',
+            'Comprimento (cm)': '50-53',
+            'Largura (cm)': '39-41',
+            'Cintura (cm)': '22-41'
+        },
+        '22': {
+            'Idade': '6-7',
+            'Altura (cm)': '125-135',
+            'Comprimento (cm)': '53-56',
+            'Largura (cm)': '41-43',
+            'Cintura (cm)': '23-42'
+        },
+        '24': {
+            'Idade': '8-9',
+            'Altura (cm)': '135-145',
+            'Comprimento (cm)': '56-59',
+            'Largura (cm)': '43-45',
+            'Cintura (cm)': '24-44'
+        },
+        '26': {
+            'Idade': '10-11',
+            'Altura (cm)': '145-155',
+            'Comprimento (cm)': '59-62',
+            'Largura (cm)': '45-47',
+            'Cintura (cm)': '25-47'
+        },
+        '28': {
+            'Idade': '12-13',
+            'Altura (cm)': '155-165',
+            'Comprimento (cm)': '62-65',
+            'Largura (cm)': '47-49',
+            'Cintura (cm)': '26-50'
+        }
+    }
+};
+
+// Função para mostrar as medidas específicas
+function mostrarMedidasEspecificas(tipoProduto, tamanho) {
+    const modal = document.getElementById('medidasEspecificasModal');
+    const spanTamanho = document.getElementById('tamanhoSelecionado');
+    const tabela = document.getElementById('tabelaMedidasEspecificas');
+    
+    // Verifica se o tipo de produto e tamanho existem
+    if (!medidasProdutos[tipoProduto] || !medidasProdutos[tipoProduto][tamanho]) {
+        console.error('Medidas não encontradas para:', tipoProduto, tamanho);
+        return;
+    }
+    
+    // Atualiza o título com o tamanho selecionado
+    spanTamanho.textContent = tamanho;
+    
+    // Obtém as medidas específicas
+    const medidas = medidasProdutos[tipoProduto][tamanho];
+    
+    // Cria o cabeçalho da tabela
+    let html = '<thead><tr><th>Medida</th><th>Valor</th></tr></thead><tbody>';
+    
+    // Adiciona cada medida à tabela
+    for (const [medida, valor] of Object.entries(medidas)) {
+        html += `
+            <tr>
+                <td>${medida}</td>
+                <td>${valor}</td>
+            </tr>
+        `;
+    }
+    
+    html += '</tbody>';
+    tabela.innerHTML = html;
+    
+    // Mostra o modal com uma classe de fade
+    modal.style.display = 'block';
+    setTimeout(() => {
+        modal.classList.add('active');
+    }, 10);
+}
+
+// Adiciona os eventos de clique nos tamanhos
+document.addEventListener('DOMContentLoaded', function() {
+    // Adiciona o evento de clique em todos os tamanhos disponíveis
+    const tamanhos = document.querySelectorAll('.product-sizes .size-tag');
+    tamanhos.forEach(tamanho => {
+        tamanho.addEventListener('click', function() {
+            const tipoProduto = this.closest('.product-card').dataset.productType;
+            const tamanhoSelecionado = this.textContent.trim();
+            mostrarMedidasEspecificas(tipoProduto, tamanhoSelecionado);
+        });
+    });
+
+    // Fecha o modal quando clicar no X
+    const closeButtons = document.querySelectorAll('.modal-close');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modal = this.closest('.modal');
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        });
+    });
+
+    // Fecha o modal quando clicar fora dele
+    window.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.classList.remove('active');
+            setTimeout(() => {
+                event.target.style.display = 'none';
+            }, 300);
+        }
+    });
+});
